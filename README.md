@@ -78,7 +78,7 @@ Cada juego está encapsulado dentro de su carpeta, y los componentes están orga
 1. Clonar el repositorio:
 
 ```bash
-git clone https://github.com/tuusuario/proyecto12.git
+git clone https://github.com/GiulioJose/proyecto12.git
 cd proyecto12
 ```
 
