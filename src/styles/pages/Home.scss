@@ -1,0 +1,39 @@
+@use '../global/mixins' as *;
+
+.home {
+  @include section('/assets/img/background/hero.png');
+  @include flex(row, space-evenly);
+  gap: 10px;
+  flex-wrap: wrap;
+
+  .juego {
+    height: 300px;
+    width: clamp(180px, 30vw, 330px);
+    height: clamp(200px, 30vw, 330px);
+    @include flex(column, space-between);
+    background-color: color-mix(in srgb, var(--bg-color-2) 80%, transparent);
+    padding: 20px;
+    border-radius: var(--cr-radius-1);
+    transition: all 0.3s ease-in-out;
+
+    .mini {
+      height: 80%;
+      width: 100%;
+      border-radius: var(--cr-radius-1);
+    }
+
+    p {
+      @include flex(center, center);
+      color: var(--txt-color-1);
+      font-size: clamp(var(--tfs-size-1), 3vw, var(--tfs-size-3));
+      font-weight: var(--fnt-weight-5);
+      color: var(--rtc-color-4);
+      text-align: center;
+    }
+
+    &:hover {
+      cursor: pointer;
+      scale: 1.05;
+    }
+  }
+}

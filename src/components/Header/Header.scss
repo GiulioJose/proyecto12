@@ -1,0 +1,90 @@
+@use '../../styles/global/mixins' as *;
+
+.main-header, .main-header *{
+  height: 100%;
+}
+
+.main-header{
+  position: sticky;
+  top: 0;
+  @include flex();
+  @include box(10dvh);
+  @include limit-height (40px, 100px);
+  background-color: var(--bg-color-4);
+  font-family: var(--font-1);
+  font-size: var(--tfs-size-2);
+  color: var(--txt-color-3);
+
+  .toggleMenu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    border-top: 1px solid var(--bg-color-2);
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    z-index: 999;
+
+    li{
+      background-color: var(--bg-color-4);
+    }
+  }
+
+  .links ul{
+    @include flex();
+  }
+
+  a{
+    @include flex();
+    padding: 0 var(--mpg-dyn-1);
+
+    img{
+      height: 80%;
+    }
+  }
+
+  .logo, .toggleButton, ul a {
+    padding: 0 var(--mpg-dyn-2);
+  }
+
+  .toggleMenu.inactive {
+    display: none;
+  }
+
+  .toggleMenu.active {
+    display: block;
+  }
+}
+
+// Efecto hover
+.main-header { 
+  > a, li{
+    transition: all 0.3s ease;
+  }
+  > a:hover, li:hover {
+    @include hover(var(--bg-color-3), var(--txt-color-4));
+    border-bottom: 1px solid var(--txt-color-4);
+  }  
+}
+
+//  Boton hamburguesa
+.toggleButton {
+  display: none;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  color: var(--txt-color-3);
+}
+
+@media (max-width: 800px) {
+  .main-header {
+    .links, .contact-link {
+    display: none;
+    }
+  }
+
+  .toggleButton {
+    display: block;
+      &:hover {
+        @include hover(var(--bg-color-3), var(--txt-color-4));
+      }
+  }
+}

@@ -1,0 +1,41 @@
+// flex
+@mixin flex($dir: row, $jc:space-between, $alg: center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jc;
+  align-items: $alg;
+}
+
+//hover
+@mixin hover($bg, $text){
+  background-color: $bg;
+  color: $text;
+  cursor: pointer;
+}
+
+// Section
+@mixin section($url){
+  height: 80vh;
+  width: 100%;
+  min-height: 460px;
+  background-image: url($url);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+// Tamaño del contenedor
+@mixin box ($height, $widht: 100%){
+  height: $height;
+  width: $widht;
+}
+
+@mixin limit-height($min, $max){
+  min-height: $min;
+  max-height: $max;
+}
+
+@mixin limit-width($min, $max){
+  min-width: $min;
+  max-width: $max;
+}

@@ -1,0 +1,132 @@
+@use '../global/mixins' as *;
+
+.snake {
+  @include section('/assets/img/background/snake.png');
+  @include flex(row, space-evenly, center);
+  padding: 10px;
+  gap: 5vw;
+
+  .info-snake,
+  .juego-snake {
+    width: 40%;
+    height: auto;
+  }
+
+  .info-snake {
+    @include flex(column, flex-start);
+    max-width: 422px;
+    min-width: 210px;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: var(--cr-radius-1);
+    background-color: color-mix(in srgb, var(--bg-color-2) 80%, transparent);
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: var(--fnt-weight-5);
+      color: var(--txt-color-1);
+      text-align: center;
+      background-color: var(--bg-color-3);
+      padding: 5px;
+      border-radius: var(--cr-radius-1);
+    }
+
+    #puntuacion, #record {
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      font-weight: var(--fnt-weight-5);
+      color: var(--rtc-color-4);
+      text-align: center;
+    }
+
+    #botones-wrap {
+      @include flex();
+      gap: 0.6rem;
+
+      button {
+        padding: 0.6rem 1.2rem;
+        border: none;
+        border-radius: var(--cr-radius-1);
+        font-size: clamp(12px, 3vw, 16px);
+        font-weight: var(--fnt-weight-5);
+        background-color: var(--rtc-color-4);
+        color: var(--txt-color-3);
+        cursor: pointer;
+        transition: transform 0.2s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    #controles {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.8rem;
+
+      div {
+        display: flex;
+        gap: 0.4rem;
+      }
+
+      button {
+        font-size: 1.5rem;
+        padding: 0.4rem 0.8rem;
+        border: none;
+        border-radius: var(--cr-radius-1);
+        background-color: var(--rtc-color-4);
+        color: var(--txt-color-1);
+        cursor: pointer;
+        transition: transform 0.2s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        &.presionado {
+          background-color: var(--rtc-color-1);
+          transform: scale(0.96);
+          box-shadow: 0 0 6px rgba(255, 255, 255, 0.25);
+        }
+      }
+    }
+  }
+
+  .juego-snake {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    width: clamp(280px, 90vw, 400px);
+    aspect-ratio: 1 / 1;
+    background-color: color-mix(in srgb, var(--bg-color-2) 80%, transparent);
+    border-radius: var(--cr-radius-1);
+    overflow: hidden;
+
+    .celda {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .serpiente {
+      background-color: var(--rtc-color-4);
+    }
+
+    .comida {
+      background-color: var(--rtc-color-1);
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .snake {
+    @include flex(column-reverse, space-evenly, center);
+    gap: 5vw;
+
+    .info-snake {
+      width: 80%;
+    }
+  }
+}

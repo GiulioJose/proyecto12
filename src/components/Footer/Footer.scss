@@ -1,0 +1,32 @@
+@use '../../styles/global/mixins' as *;
+
+.footer {
+  @include box(10dvh);
+  background-color: var(--bg-color-4);
+  color: var(--txt-color-3);
+  @include flex(column, space-evenly);
+  font-size: var(--tfs-size-2);
+
+  .name,
+  .LC {
+    color: var(--txt-color-2);
+  }
+
+  .name {
+    font-weight: var(--fnt-weight-5);
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+br {
+  display: none;
+}
+
+@media (max-width: 531px) {
+  br {
+    display: block;
+  }
+}

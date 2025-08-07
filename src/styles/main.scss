@@ -1,0 +1,13 @@
+// 🌐 GLOBAL
+@use './global/reset';
+@use './global/fonts';
+@use './global/global';
+@use './global/mixins';
+@use './global/variables';
+
+
+// 🎮 GAMES
+@use './games/tresenraya';
+@use './games/memoria';
+@use './games/snake';
+

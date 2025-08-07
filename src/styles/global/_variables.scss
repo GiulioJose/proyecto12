@@ -1,0 +1,58 @@
+:root {
+  // Paleta de colores
+    --rtc-color-1: #4E9F3D; // Verde bosque
+    --rtc-color-2: #D4A373; // Tierra cálida
+    --rtc-color-3: #FAEDCD; // Crema claro
+    --rtc-color-4: #6D4C41; // Marrón madera
+    --rtc-color-5: #6CCFF6; // Azul claro acento
+
+    // Background color (bgc)
+    --bg-color-1: var(--rtc-color-1);
+    --bg-color-2: var(--rtc-color-2);
+    --bg-color-3: var(--rtc-color-3);
+    --bg-color-4: var(--rtc-color-4);
+    --bg-color-5: var(--rtc-color-5);
+
+    // Font FamilyS
+    --font-1: 'Nunito', sans-serif;
+    --font-2: 'Fredoka', sans-serif;
+  
+    // Text color (txt)
+    --txt-color-1: var(--rtc-color-1);
+    --txt-color-2: var(--rtc-color-2);
+    --txt-color-3: var(--rtc-color-3);
+    --txt-color-4: var(--rtc-color-4);
+    --txt-color-5: var(--rtc-color-5);
+  
+    // Text Font Size (tfs)
+    --tfs-size-1: 16px;
+    --tfs-size-2: 20px;
+    --tfs-size-3: 24px;
+    --tfs-size-4: 32px;
+    --tfs-size-5: 40px;
+    --tfs-size-6: 48px;
+    --tfs-size-7: 64px;
+    --tfs-size-8: 96px;
+  
+   // Font Weight (fnt)
+    --fnt-weight-1: 300; // light
+    --fnt-weight-2: 400; // regular
+    --fnt-weight-3: 500; // medium
+    --fnt-weight-4: 600; // semi bold
+    --fnt-weight-5: 700; // bold
+    --fnt-weight-6: 800; // extra bold
+  
+    // Corner Radius (cr)
+    --cr-radius-1: 10px;
+    --cr-radius-2: 20px;
+    --cr-radius-3: 30px;
+  
+    // Margin, Padding y Gap Dinamics (mpg)
+    --mpg-dyn-1: 1vw;
+    --mpg-dyn-2: 2vw;
+    --mpg-dyn-3: 3vw;
+    --mpg-dyn-4: 4vw;
+    --mpg-dyn-5: 5vw;
+    --mpg-dyn-6: 6vw;
+    --mpg-dyn-7: 7vw;
+  }
